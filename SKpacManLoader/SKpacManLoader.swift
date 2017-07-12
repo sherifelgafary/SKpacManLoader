@@ -32,17 +32,17 @@ class SKpacManLoader: UIView {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        self.ReversedLoaderContainerView.hidden=true
-        self.loaderContainerView.hidden=false
+        self.ReversedLoaderContainerView.isHidden=true
+        self.loaderContainerView.isHidden=false
         
         
         
     }
     
     func prepareLoader() {
-        self.pacmanInLayer(self.pacManView.layer, size: CGSizeMake(pacmanSize, pacmanSize), color: pacmanColor)
-        self.pacmanInLayer(self.reversedPacManView.layer, size: CGSizeMake(pacmanSize, pacmanSize), color: pacmanColor)
-        self.reversedPacManView.transform = CGAffineTransformMakeRotation((180.0 * CGFloat(M_PI)) / 180.0)
+        self.pacmanInLayer(self.pacManView.layer, size: CGSize(width: pacmanSize, height: pacmanSize), color: pacmanColor)
+        self.pacmanInLayer(self.reversedPacManView.layer, size: CGSize(width: pacmanSize, height: pacmanSize), color: pacmanColor)
+        self.reversedPacManView.transform = CGAffineTransform(rotationAngle: (180.0 * CGFloat(M_PI)) / 180.0)
         
         for view in self.dotsView.subviews {
             view.backgroundColor = self.dotsColor
@@ -52,7 +52,7 @@ class SKpacManLoader: UIView {
             view.backgroundColor = self.dotsColor
         }
         
-        _ = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: #selector(SKpacManLoader.animatePacman), userInfo: nil, repeats: false)
+        _ = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(SKpacManLoader.animatePacman), userInfo: nil, repeats: false)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -65,15 +65,15 @@ class SKpacManLoader: UIView {
         
         pacmanLeadingConstraint.constant=self.frame.width - pacmanSize*2
         
-        UIView.animateWithDuration(3, animations: {
+        UIView.animate(withDuration: 3, animations: {
             self.layoutIfNeeded()
-        }) { (finished:Bool) in
-            self.ReversedLoaderContainerView.hidden=false
-            self.loaderContainerView.hidden=true
+        }, completion: { (finished:Bool) in
+            self.ReversedLoaderContainerView.isHidden=false
+            self.loaderContainerView.isHidden=true
             self.pacmanLeadingConstraint.constant=0
             
-            _ = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: #selector(SKpacManLoader.animateReversedPacman), userInfo: nil, repeats: false)
-        }
+            _ = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(SKpacManLoader.animateReversedPacman), userInfo: nil, repeats: false)
+        }) 
         
     }
     
@@ -81,18 +81,18 @@ class SKpacManLoader: UIView {
         
         reversedPacManTrailingConstraint.constant=self.frame.width - pacmanSize*2
         
-        UIView.animateWithDuration(3, animations: {
+        UIView.animate(withDuration: 3, animations: {
             self.layoutIfNeeded()
-        }) { (finished:Bool) in
-            self.ReversedLoaderContainerView.hidden=true
-            self.loaderContainerView.hidden=false
+        }, completion: { (finished:Bool) in
+            self.ReversedLoaderContainerView.isHidden=true
+            self.loaderContainerView.isHidden=false
             self.reversedPacManTrailingConstraint.constant=0
-            _ = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: #selector(SKpacManLoader.animatePacman), userInfo: nil, repeats: false)
+            _ = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(SKpacManLoader.animatePacman), userInfo: nil, repeats: false)
             
-        }
+        }) 
     }
     
-    func pacmanInLayer(layer: CALayer, size: CGSize, color: UIColor) {
+    func pacmanInLayer(_ layer: CALayer, size: CGSize, color: UIColor) {
         let pacmanSize =  size.width
         let pacmanDuration: CFTimeInterval = 0.5
         let timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionDefault)
@@ -119,7 +119,7 @@ class SKpacManLoader: UIView {
         animation.animations = [strokeStartAnimation, strokeEndAnimation]
         animation.duration = pacmanDuration
         animation.repeatCount = HUGE
-        animation.removedOnCompletion = false
+        animation.isRemovedOnCompletion = false
         
         // Draw pacman
         let pacman = self.createLayerWith(size: CGSize(width: pacmanSize, height: pacmanSize), color: color)
@@ -131,26 +131,26 @@ class SKpacManLoader: UIView {
         )
         
         pacman.frame = frame
-        pacman.addAnimation(animation, forKey: "animation")
+        pacman.add(animation, forKey: "animation")
         layer.addSublayer(pacman)
     }
     
-    func createLayerWith(size size: CGSize, color: UIColor) -> CALayer {
+    func createLayerWith(size: CGSize, color: UIColor) -> CALayer {
         let layer: CAShapeLayer = CAShapeLayer()
         let path: UIBezierPath = UIBezierPath()
         
-        path.addArcWithCenter(CGPoint(x: size.width / 2, y: size.height / 2),
+        path.addArc(withCenter: CGPoint(x: size.width / 2, y: size.height / 2),
                               radius: size.width / 4,
                               startAngle: 0,
                               endAngle: CGFloat(2 * M_PI),
                               clockwise: true);
         layer.fillColor = nil
-        layer.strokeColor = color.CGColor
+        layer.strokeColor = color.cgColor
         layer.lineWidth = size.width / 2
         
         layer.backgroundColor = nil
-        layer.path = path.CGPath
-        layer.frame = CGRectMake(0, 0, size.width, size.height)
+        layer.path = path.cgPath
+        layer.frame = CGRect(x: 0, y: 0, width: size.width, height: size.height)
         
         return layer
     }
@@ -163,13 +163,13 @@ var loader:SKpacManLoader?
 var overlayView:UIView?
 
 
-func startLoadingIn(ViewController:UIViewController, withBackGround:Bool = true ,withPacManColor:UIColor = UIColor(hexString: "#C41230ff")!, withDotsColor:UIColor = UIColor(hexString: "#C41230ff")! )
+func startLoadingIn(_ ViewController:UIViewController, withBackGround:Bool = true ,withPacManColor:UIColor = UIColor(hexString: "#C41230ff")!, withDotsColor:UIColor = UIColor(hexString: "#C41230ff")! )
 {
     if loader != nil {
         finishLoadingFrom(ViewController)
     }
     
-    loader = UINib(nibName: "SKpacManLoader", bundle: nil).instantiateWithOwner(ViewController, options: nil)[0] as? SKpacManLoader
+    loader = UINib(nibName: "SKpacManLoader", bundle: nil).instantiate(withOwner: ViewController, options: nil)[0] as? SKpacManLoader
     loader?.pacmanColor = withPacManColor
     loader?.dotsColor = withDotsColor
     loader?.prepareLoader()
@@ -178,20 +178,20 @@ func startLoadingIn(ViewController:UIViewController, withBackGround:Bool = true 
     if withBackGround {
         overlayView?.backgroundColor = UIColor(colorLiteralRed: 0.4, green: 0.4, blue: 0.4, alpha: 0.4)
     }else{
-        overlayView?.backgroundColor = UIColor.clearColor()
+        overlayView?.backgroundColor = UIColor.clear
     }
-    overlayView?.userInteractionEnabled=true
+    overlayView?.isUserInteractionEnabled=true
     // var currentWindow : UIWindow = UIApplication.sharedApplication().keyWindow!
     ViewController.view.addSubview(overlayView!)
     overlayView?.addSubview(loader!)
     loader?.center=(overlayView?.center)!
 }
 
-func finishLoadingFrom(ViewController:UIViewController)
+func finishLoadingFrom(_ ViewController:UIViewController)
 {
     if overlayView != nil{
         overlayView?.removeFromSuperview()
-        ViewController.view.userInteractionEnabled = true
+        ViewController.view.isUserInteractionEnabled = true
     }
 }
 
@@ -201,14 +201,14 @@ extension UIColor {
         let r, g, b, a: CGFloat
         
         if hexString.hasPrefix("#") {
-            let start = hexString.startIndex.advancedBy(1)
-            let hexColor = hexString.substringFromIndex(start)
+            let start = hexString.characters.index(hexString.startIndex, offsetBy: 1)
+            let hexColor = hexString.substring(from: start)
             
             if hexColor.characters.count == 8 {
-                let scanner = NSScanner(string: hexColor)
+                let scanner = Scanner(string: hexColor)
                 var hexNumber: UInt64 = 0
                 
-                if scanner.scanHexLongLong(&hexNumber) {
+                if scanner.scanHexInt64(&hexNumber) {
                     r = CGFloat((hexNumber & 0xff000000) >> 24) / 255
                     g = CGFloat((hexNumber & 0x00ff0000) >> 16) / 255
                     b = CGFloat((hexNumber & 0x0000ff00) >> 8) / 255
