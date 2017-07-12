@@ -1,0 +1,303 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AAC174451F16B9910039FA91 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC174441F16B9910039FA91 /* AppDelegate.swift */; };
+		AAC174471F16B9910039FA91 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC174461F16B9910039FA91 /* ViewController.swift */; };
+		AAC1744A1F16B9910039FA91 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAC174481F16B9910039FA91 /* Main.storyboard */; };
+		AAC1744C1F16B9910039FA91 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAC1744B1F16B9910039FA91 /* Assets.xcassets */; };
+		AAC1744F1F16B9910039FA91 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAC1744D1F16B9910039FA91 /* LaunchScreen.storyboard */; };
+		AAC174581F16B9D70039FA91 /* SKpacManLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC174561F16B9D70039FA91 /* SKpacManLoader.swift */; };
+		AAC174591F16B9D70039FA91 /* SKpacManLoader.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAC174571F16B9D70039FA91 /* SKpacManLoader.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AAC174411F16B9910039FA91 /* SKpacManLoader Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SKpacManLoader Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAC174441F16B9910039FA91 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AAC174461F16B9910039FA91 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AAC174491F16B9910039FA91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AAC1744B1F16B9910039FA91 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AAC1744E1F16B9910039FA91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AAC174501F16B9910039FA91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAC174561F16B9D70039FA91 /* SKpacManLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKpacManLoader.swift; sourceTree = "<group>"; };
+		AAC174571F16B9D70039FA91 /* SKpacManLoader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SKpacManLoader.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AAC1743E1F16B9910039FA91 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AAC174381F16B9910039FA91 = {
+			isa = PBXGroup;
+			children = (
+				AAC174431F16B9910039FA91 /* SKpacManLoader Demo */,
+				AAC174421F16B9910039FA91 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AAC174421F16B9910039FA91 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AAC174411F16B9910039FA91 /* SKpacManLoader Demo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AAC174431F16B9910039FA91 /* SKpacManLoader Demo */ = {
+			isa = PBXGroup;
+			children = (
+				AAC174561F16B9D70039FA91 /* SKpacManLoader.swift */,
+				AAC174571F16B9D70039FA91 /* SKpacManLoader.xib */,
+				AAC174441F16B9910039FA91 /* AppDelegate.swift */,
+				AAC174461F16B9910039FA91 /* ViewController.swift */,
+				AAC174481F16B9910039FA91 /* Main.storyboard */,
+				AAC1744B1F16B9910039FA91 /* Assets.xcassets */,
+				AAC1744D1F16B9910039FA91 /* LaunchScreen.storyboard */,
+				AAC174501F16B9910039FA91 /* Info.plist */,
+			);
+			path = "SKpacManLoader Demo";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AAC174401F16B9910039FA91 /* SKpacManLoader Demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AAC174531F16B9910039FA91 /* Build configuration list for PBXNativeTarget "SKpacManLoader Demo" */;
+			buildPhases = (
+				AAC1743D1F16B9910039FA91 /* Sources */,
+				AAC1743E1F16B9910039FA91 /* Frameworks */,
+				AAC1743F1F16B9910039FA91 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SKpacManLoader Demo";
+			productName = "SKpacManLoader Demo";
+			productReference = AAC174411F16B9910039FA91 /* SKpacManLoader Demo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AAC174391F16B9910039FA91 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Sherif Khaled";
+				TargetAttributes = {
+					AAC174401F16B9910039FA91 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = AAC1743C1F16B9910039FA91 /* Build configuration list for PBXProject "SKpacManLoader Demo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AAC174381F16B9910039FA91;
+			productRefGroup = AAC174421F16B9910039FA91 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AAC174401F16B9910039FA91 /* SKpacManLoader Demo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AAC1743F1F16B9910039FA91 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAC174591F16B9D70039FA91 /* SKpacManLoader.xib in Resources */,
+				AAC1744F1F16B9910039FA91 /* LaunchScreen.storyboard in Resources */,
+				AAC1744C1F16B9910039FA91 /* Assets.xcassets in Resources */,
+				AAC1744A1F16B9910039FA91 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AAC1743D1F16B9910039FA91 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAC174471F16B9910039FA91 /* ViewController.swift in Sources */,
+				AAC174581F16B9D70039FA91 /* SKpacManLoader.swift in Sources */,
+				AAC174451F16B9910039FA91 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AAC174481F16B9910039FA91 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AAC174491F16B9910039FA91 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AAC1744D1F16B9910039FA91 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AAC1744E1F16B9910039FA91 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AAC174511F16B9910039FA91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AAC174521F16B9910039FA91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AAC174541F16B9910039FA91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "SKpacManLoader Demo/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Xapps.SKpacManLoader-Demo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		AAC174551F16B9910039FA91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "SKpacManLoader Demo/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Xapps.SKpacManLoader-Demo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AAC1743C1F16B9910039FA91 /* Build configuration list for PBXProject "SKpacManLoader Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAC174511F16B9910039FA91 /* Debug */,
+				AAC174521F16B9910039FA91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AAC174531F16B9910039FA91 /* Build configuration list for PBXNativeTarget "SKpacManLoader Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAC174541F16B9910039FA91 /* Debug */,
+				AAC174551F16B9910039FA91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AAC174391F16B9910039FA91 /* Project object */;
+}
