@@ -1,6 +1,10 @@
 # SKpacManLoader
+
+![packmanloader2](https://user-images.githubusercontent.com/5552822/28139593-291b7f0a-6755-11e7-9563-120a4eabe01b.gif)
+
 SKpacManLoader is a custom loader view which have the famous pac-man character eating food back and fourth till the loading is finished 
-![packmanloader](https://user-images.githubusercontent.com/5552822/28139414-735c307e-6754-11e7-8ed5-9f7122e911b5.gif)
+
+
 
 ## Requirements
 
