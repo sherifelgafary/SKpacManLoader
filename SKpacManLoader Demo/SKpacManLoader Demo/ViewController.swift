@@ -16,7 +16,8 @@ class ViewController: UIViewController {
     }
 
     override func viewDidAppear(_ animated: Bool) {
-        startLoadingIn(self, withBackGround: true)
+        startLoadingIn(self, withBackGround: true, withPacManColor: UIColor.brown, withDotsColor: UIColor.brown)
+        finishLoadingFrom(self)
     }
 
 
